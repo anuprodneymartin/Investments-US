@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Stock Investments</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <nav>
+    <%= button_to 'Home', root_path, :method => 'get' %> 
+    <%= button_to 'Sign in', login_path, :method => 'get' %>
+    <%= button_to 'Investmens', :method => 'get' %>
+    <%= button_to 'Knowledge centre', :method => 'get' %>
+    <% if @current_user.present? %>
+    <%= button_to 'Logout', :method => 'get' %>
+  <% else %>
+    <%= button_to 'Sign Up to Our Investment Insights', new_user_path, :method => 'get' %>
+    <% end %>
+      </nav>
+
+
+
     <%= yield %>
   </body>
 </html>
