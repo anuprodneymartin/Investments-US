@@ -36,10 +36,14 @@ puts "#{ Company.count } companies"
 
 
 
+Portfolio.destroy_all
 
-
-
-
-
+p1 = Portfolio.create :title => 'Aggresive', :user_id => '1', :portfolio_amount => '110,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+p2 = Portfolio.create :title => 'Moderate', :user_id => '2', :portfolio_amount => '120,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+p3 = Portfolio.create :title => 'Aggresive', :user_id => '3', :portfolio_amount => '90,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+p4 = Portfolio.create :title => 'Moderate', :user_id => '4', :portfolio_amount => '60,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+p5 = Portfolio.create :title => 'Aggresive', :user_id => '5', :portfolio_amount => '140,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+p6 = Portfolio.create :title => 'Moderate', :user_id => '6', :portfolio_amount => '70,000', :investments => 'American investments', :email_address => 'jonesy@ga.co'
+puts "#{ Portfolio.count } portfolio"
 
 
