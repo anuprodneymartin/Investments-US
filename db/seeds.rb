@@ -30,9 +30,24 @@ c5 = Company.create :name => 'Gilead Sciences Inc', :history => 'their history',
 c6 = Company.create :name => 'Apple', :history => 'their history', :current => 'their current status', :future => 'potential future', :potential => 'our research', :company_id => '6'
 c7 = Company.create :name => 'Microsoft', :history => 'their history', :current => 'their current status', :future => 'potential future', :potential => 'our research', :company_id => '7'
 c8 = Company.create :name => 'US Bancorp', :history => 'their history', :current => 'their current status', :future => 'potential future', :potential => 'our research', :company_id => '8'
-c9 = Company.create :name => 'Apple', :history => 'their history', :current => 'their current status', :future => 'potential future', :potential => 'our research', :company_id => '9'
+c9 = Company.create :name => 'Coinbase Global Inc', :history => 'their history', :current => 'their current status', :future => 'potential future', :potential => 'our research', :company_id => '9'
 puts "#{ Company.count } companies"
 
+
+
+
+
+Portfolios_stocks.destroy_all
+q1 = Portfolios_stocks.create :stock_id => 'BABA'
+q2 = Portfolios_stocks.create :stock_id => 'TCEHY'
+q3 = Portfolios_stocks.create :stock_id => 'QS'
+q4 = Portfolios_stocks.create :stock_id => 'COST'
+q5 = Portfolios_stocks.create :stock_id => 'GILD'
+q6 = Portfolios_stocks.create :stock_id => 'AAPL'
+q7 = Portfolios_stocks.create :stock_id => 'MSFT'
+q8 = Portfolios_stocks.create :stock_id => 'USB'
+q9 = Portfolios_stocks.create :stock_id => 'COIN'
+puts "#{ Portfolios_stocks.count } Portfolio_stocks"
 
 
 
