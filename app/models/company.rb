@@ -1,3 +1,4 @@
 class Company < ApplicationRecord
-    has_many :companies
+    belongs_to :stock
+    
 end

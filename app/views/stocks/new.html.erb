@@ -2,10 +2,12 @@
 
 <p>Here's your stock information <%= @current_user if @current_user.present? ></p>
 
-<form action="/stocks/info">
-    <label>
-        Stock symbol:
-            <input name="symbol" placeholder="GOOG" required autofocus>
-    <label>
+<% @articles.each do |company| %>
 
-    <button>Search</button>
+    <ul>
+        <li><%= link_to company.name, company %></li>
+        
+    </ul>
+
+<% end %>
+

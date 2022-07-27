@@ -7,6 +7,7 @@ class PortfolioController < ApplicationController
 
     def create
         portfolio = Portfolio.create portfolio_params
+        portfolio.stocks << stocks
         @current_user.portfolio << stocks #give the stock in a portfolio to the current user.
         redirect_to root_path
     end

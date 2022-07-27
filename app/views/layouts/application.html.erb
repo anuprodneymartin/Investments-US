@@ -11,17 +11,17 @@
 
   <body>
     <nav>
-      <div class="div-1">
-        <%= button_to 'Home', root_path, :method => 'get' %> 
-        <%= button_to 'Sign in', login_path, :method => 'get' %>
-        <%= button_to 'Investmens', :method => 'get' %>
-        <%= button_to 'Knowledge centre', :method => 'get' %>
+    
+        <%= link_to 'Home', root_path %> 
+        <%= link_to 'Sign in', login_path %>
+        <%= link_to 'Investmens' %>
+        <%= link_to 'Knowledge centre', articles_path %>
         <% if @current_user.present? %>
-          <%= button_to 'Logout', :method => 'get' %>
+          <%= link_to 'Logout', login_path, :method => 'destroy' %>
         <% else %>
-          <%= button_to 'Sign Up to Our Investment Insights', new_user_path, :method => 'get' %>
+          <%= link_to 'Sign Up to Our Investment Insights', new_user_path %>
         <% end %>
-      </div class="div-1">
+      
       </nav>
 
 
