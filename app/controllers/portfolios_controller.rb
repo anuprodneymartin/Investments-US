@@ -3,6 +3,7 @@ class PortfoliosController < ApplicationController
 
     def new
         @portfolio = Portfolio.new
+    end
 
     def info
         StockQuote::Stock.new(:api_key => 'pk_16a849fd637243a79fff90fa4d42bc5d')
@@ -11,8 +12,6 @@ class PortfoliosController < ApplicationController
         @price = info.latest_price
     end
 
-
-    end
 
     def create
         portfolio = Portfolio.create portfolio_params
@@ -23,6 +22,10 @@ class PortfoliosController < ApplicationController
 
     def show
         @portfolio = Portfolio.find params[:id]
+    end
+    
+    def edit
+        @portfolio = Portfolio.new
     end
 
     private
