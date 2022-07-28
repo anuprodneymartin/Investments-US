@@ -1,4 +1,4 @@
-class PortfolioController < ApplicationController
+class PortfoliosController < ApplicationController
     before_action :check_for_login
 
     def new
@@ -10,6 +10,10 @@ class PortfolioController < ApplicationController
         portfolio.stocks << stocks
         @current_user.portfolio << stocks #give the stock in a portfolio to the current user.
         redirect_to root_path
+    end
+
+    def show
+        @portfolio = Portfolio.find params[:id]
     end
 
 

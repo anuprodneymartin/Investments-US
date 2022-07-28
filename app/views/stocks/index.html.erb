@@ -1,0 +1,7 @@
+
+<% @stocks.each do |stocks| %>
+    <li>
+    <%=link_to stocks.name, stocks %>
+    <%= stocks.history %>
+    </li>
+<% end %>

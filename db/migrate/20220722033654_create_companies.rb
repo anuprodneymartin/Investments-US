@@ -7,6 +7,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.text :future
       t.text :potential
       t.integer :company_id
+      t.string :stock_code
 
       t.timestamps
     end

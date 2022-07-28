@@ -2,12 +2,12 @@
 
 <p>Here's your stock information <%= @current_user if @current_user.present? ></p>
 
-<% @articles.each do |company| %>
+<%= @articles.name %>
+<%= @articles.history %>
+<%= @articles.current %>
+<%= @articles.future %>
+<%= @articles.potential %>
 
-    <ul>
-        <li><%= link_to company.name, company %></li>
-        
-    </ul>
 
-<% end %>
+
 

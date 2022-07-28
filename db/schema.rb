@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_25_060458) do
+ActiveRecord::Schema.define(version: 2022_07_25_060349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,14 @@ ActiveRecord::Schema.define(version: 2022_07_25_060458) do
     t.text "future"
     t.text "potential"
     t.integer "company_id"
+    t.string "stock_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "companies_portfolios", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "portfolio_id"
   end
 
   create_table "portfolios", force: :cascade do |t|
@@ -43,15 +49,6 @@ ActiveRecord::Schema.define(version: 2022_07_25_060458) do
     t.text "email_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "portfolios_stocks", force: :cascade do |t|
-    t.integer "stock_id"
-    t.integer "portfolio_id"
-  end
-
-  create_table "stocks", force: :cascade do |t|
-    t.string "code"
   end
 
   create_table "users", force: :cascade do |t|

@@ -10,22 +10,27 @@
   </head>
 
   <body>
-    <nav>
-    
+    <div class="container">
+      <nav>
         <%= link_to 'Home', root_path %> 
-        <%= link_to 'Sign in', login_path %>
-        <%= link_to 'Investmens' %>
-        <%= link_to 'Knowledge centre', articles_path %>
-        <% if @current_user.present? %>
+          <% if @current_user.present? %>
+          <%= link_to 'Investmens', portfolio_path(@current_user.portfolio) %>
+          <%= link_to 'Knowledge centre', articles_path %>
+          <%= link_to 'Researched Stocks', companies_path %>
           <%= link_to 'Logout', login_path, :method => 'destroy' %>
         <% else %>
           <%= link_to 'Sign Up to Our Investment Insights', new_user_path %>
+          <%= link_to 'Sign in', login_path %>
+
         <% end %>
       
       </nav>
+    </div>
 
 
 
     <%= yield %>
   </body>
 </html>
+
+

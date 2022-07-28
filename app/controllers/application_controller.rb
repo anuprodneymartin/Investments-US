@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     end
 
     def check_for_login
-        redirect_to login_path unless current @current.user present?
+        redirect_to login_path unless @current_user.present?
     end
     
 end

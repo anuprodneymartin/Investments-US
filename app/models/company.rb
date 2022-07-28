@@ -1,4 +1,3 @@
 class Company < ApplicationRecord
-    belongs_to :stock
-    
+    has_and_belongs_to_many :portfolios    
 end
