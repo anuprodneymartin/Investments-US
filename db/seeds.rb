@@ -56,23 +56,23 @@ p1.companies << c1 << c2 << c3 << c6
 
 u2.portfolio = p2
 u2.save
-p1.companies << c1 << c3 << c4 << c9
+p2.companies << c1 << c3 << c4 << c9
 
 u3.portfolio = p2
 u3.save
-p1.companies << c1 << c5 << c9 << c7
+p3.companies << c1 << c5 << c9 << c7
 
 u4.portfolio = p2
 u4.save
-p1.companies << c1 << c8 << c9 << c4
+p4.companies << c1 << c8 << c9 << c4
 
 u5.portfolio = p2
 u5.save
-p1.companies << c8 << c8 << c2
+p5.companies << c8 << c8 << c2
 
 u6.portfolio = p2
 u6.save
-p1.companies << c4 << c5 << c8 << c6
+p6.companies << c4 << c5 << c8 << c6
 
 
 

@@ -1,7 +1,10 @@
 
 <% @stocks.each do |stocks| %>
-    <li>
-    <%=link_to stocks.name, stocks %>
-    <%= stocks.history %>
-    </li>
+<ul>
+    <li>Name: <%= stocks.name %></li>
+    <li>History: <%= stocks.history %></li>
+    <li>Currently whats happening: <%= stocks.current%></li>
+    <li>Potential: <%= stocks.potential %></li>
+</ul>
 <% end %>
+

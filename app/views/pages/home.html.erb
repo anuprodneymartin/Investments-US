@@ -3,17 +3,17 @@
 <p>Welcome <%= @current_user.email if @current_user.present? %></p>
 
 <p>
-    <a href="/company">
-        Click here for Company Information.
-    </a>
-
+    <p><%= link_to 'Click here for Company Information.', companies_path %></p>
     <a href="/articles">
         Click here to learn about intersting articles on invesments philosophy.
     </a>
-
     <a href="/create portfolio">
         Click here to create investment portfolio.
     </a>
-    
 </p>
+
+
+
+
+
 

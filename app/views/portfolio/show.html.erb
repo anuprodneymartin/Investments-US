@@ -1,0 +1,9 @@
+ <h4> My Portfolio </h4>  
+
+<% @portfolio.companies.each do |company| %>
+    <h1><%= company.name %></h1>
+    <h2><%= company.history %></h2>
+    <%= company.potential %>
+    <%= company.current %>
+    <%= company.potential %>
+<% end %>

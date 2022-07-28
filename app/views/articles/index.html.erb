@@ -1,11 +1,12 @@
-<h2>Different investment Philosophies at a Glance</h2>
+<h4>Different investment Philosophies at a Glance</h4>
 
 <% @articles.each do |article| %>
-
-    <ul>
-        <li><%= link_to article.title, article %></li>
-        
-    </ul>
-
+<ul>
+    <li>Title: <%= article.title %></li>
+    <li>Portfolio amount: <%= article.title %></li>
+    <li>Investment: <%= article.about%></li>
+    <li><%= image_tag article.image %></li>
+</ul>
 <% end %>
+
 

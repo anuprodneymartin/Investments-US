@@ -10,26 +10,40 @@
   </head>
 
   <body>
-    <div class="container">
-      <nav>
-        <%= link_to 'Home', root_path %> 
+    
+      <nav class="container">
+      <button type="button" class="btn btn-secondary">
+        <%= link_to 'Home', root_path %>
+        </button>
+        
           <% if @current_user.present? %>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Investmens', portfolio_path(@current_user.portfolio) %>
+          </button>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Knowledge centre', articles_path %>
+          </button>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Researched Stocks', companies_path %>
+          </button>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Logout', login_path, :method => 'destroy' %>
+          </button>
         <% else %>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Sign Up to Our Investment Insights', new_user_path %>
+          </button>
+          <button type="button" class="btn btn-secondary">
           <%= link_to 'Sign in', login_path %>
+          </button>
 
         <% end %>
-      
       </nav>
     </div>
 
-
-
-    <%= yield %>
+    <div class= container>
+      <%= yield %>
+    </div>
   </body>
 </html>
 
