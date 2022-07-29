@@ -1,6 +1,6 @@
 <h5>Your portfolio</h5>
 
-<h5>"Lets make you some money" <%= @current_user if current_user.present? %></h5>
+<%= @current_user if current_user.present? %>
 
 
 <%= render :partial => 'form' %>
