@@ -1,38 +1,37 @@
-<br>
-<br>
-<br>
-<%= form_for @portfolio do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :portfolio_amout %>
-    $<%= f.number_field :portfolio_amount %>
-    <%= f.label :stock_code %>
-    <div class="stocks">
-        <div class="firstStock">
-            <%= check_box_tag(:stock_code, :value => 'BABA') %>
-            <%= label_tag(:stock_code, 'BABA') %>
-            <%= check_box_tag(:stock_code, :value => 'TCEHY') %>
-            <%= label_tag(:stock_code, 'TCEHY') %>
-            <%= check_box_tag(:stock_code, :value => 'QS') %>
-            <%= label_tag(:stock_code, 'QS') %>
+<div class='aa'>
+    <%= form_for @portfolio do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <%= f.label :portfolio_amout %>
+        $<%= f.number_field :portfolio_amount %>
+        <%= f.label :stock_code %>
+        <div class="stocks">
+            <div class="firstStock">
+                <%= check_box_tag(:stock_code, :value => 'BABA') %>
+                <%= label_tag(:stock_code, 'BABA') %>
+                <%= check_box_tag(:stock_code, :value => 'TCEHY') %>
+                <%= label_tag(:stock_code, 'TCEHY') %>
+                <%= check_box_tag(:stock_code, :value => 'QS') %>
+                <%= label_tag(:stock_code, 'QS') %>
+            </div>
+            <div class="secondStock">
+                <%= check_box_tag(:stock_code, :value => 'COST') %>
+                <%= label_tag(:stock_code, 'COST') %>
+                <%= check_box_tag(:stock_code, :value => 'GILD') %>
+                <%= label_tag(:stock_code, 'GILD') %>
+                <%= check_box_tag(:stock_code, :value => 'AAPL') %>
+                <%= label_tag(:stock_code, 'AAPL') %>
+            </div>
+            <div class="thirdStock">
+                <%= check_box_tag(:stock_code, :value => 'MSFT') %>
+                <%= label_tag(:stock_code, 'MSFT') %>
+                <%= check_box_tag(:stock_code, :value => 'COIN') %>
+                <%= label_tag(:stock_code, 'COIN') %>
+                <%= check_box_tag(:stock_code, :value => 'USB') %>
+                <%= label_tag(:stock_code, 'USB') %>
+            </div>
         </div>
-        <div class="secondStock">
-            <%= check_box_tag(:stock_code, :value => 'COST') %>
-            <%= label_tag(:stock_code, 'COST') %>
-            <%= check_box_tag(:stock_code, :value => 'GILD') %>
-            <%= label_tag(:stock_code, 'GILD') %>
-            <%= check_box_tag(:stock_code, :value => 'AAPL') %>
-            <%= label_tag(:stock_code, 'AAPL') %>
-        </div>
-        <div class="thirdStock">
-            <%= check_box_tag(:stock_code, :value => 'MSFT') %>
-            <%= label_tag(:stock_code, 'MSFT') %>
-            <%= check_box_tag(:stock_code, :value => 'COIN') %>
-            <%= label_tag(:stock_code, 'COIN') %>
-            <%= check_box_tag(:stock_code, :value => 'USB') %>
-            <%= label_tag(:stock_code, 'USB') %>
-        </div>
-    </div>
+</div>
     
 
     <%= f.submit 'Create', :class => 'buttonRight' %>

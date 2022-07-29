@@ -1,10 +1,11 @@
-<br>
-<h2>Welcome to the world of Quality investments.</h2>
+<div class='bc'>
+    <h3>Welcome to the world of Quality investments.</h3>
+</div>  
 
 <p>Welcome <%= @current_user.email if @current_user.present? %></p>
 
 <p>
-    <p><%= link_to 'Click here to understand more about an company that you may want to invest in.', companies_path %></p>
+    <p><%= link_to 'Click to understand more about an company that you may want to invest in.', companies_path %></p>
     <a href="/articles">
         Click here to learn about intersting articles on invesments philosophy.
     </a>

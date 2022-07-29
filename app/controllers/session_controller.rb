@@ -13,7 +13,7 @@ class SessionController < ApplicationController
     end
 
     def destroy
-        session[:user_id] = '/login'
+        session[:user_id] = 'delete'
         redirect_to login_path
     end
 
