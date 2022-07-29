@@ -4,7 +4,7 @@
 
 <% @portfolio.companies.each do |company| %>
     <div class="a">
-    <%= company.name %>
+    <%= link_to company.name, company %>
     <%= company.history %>
     <%= company.potential %>
     <%= company.current %>
