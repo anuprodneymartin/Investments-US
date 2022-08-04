@@ -1,24 +1,20 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Info**
 
-Things you may want to cover:
+## Stock price and portfolio site.
+[Click Here](https://glacial-earth-74336.herokuapp.com/) to access the application.
+___
+A programme created using CRUD systems inspired by stock broking firms.
 
-* Ruby version
+Developed this website on a CRUD system with 3 models using on to one and one to many associations.
+Users can login to create stock portfolio's and monitor the prices of those stocks which are inhouse researched and for the timebeing the users can add 9 stocks that I have researched on; to their portfolio. Each user can create a single portfolio for him/herself with an email address and a password that is been encrypted with Bcrypt security system. Moreover once the user/s have signedup and ready to use our website they can read about the stocks that have been researched and know a few things about great investors and their investment philosophy behind their success in stock selection and investing.
 
-* System dependencies
+**Tech Stack**
+1. Ruby on Rails
+2. PostgreSQL
+3. Javascript & jQuery
+4. HTML5
+5. CSS
+6. Heroku
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**I acknowlege the help from both Loden and Joel for their insight and help on this project.**
